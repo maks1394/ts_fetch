@@ -33,8 +33,8 @@ class APIFetchAgent extends BasicAgent {
     });
   }
 
-  deleteTask(id: string): Promise<never> {
-    return this.fetch<never>('/tasks/' + id, {
+  deleteTask(id: string): Promise<void> {
+    return this.fetch<void>('/tasks/' + id, {
       method: 'DELETE',
       headers: {
         'Content-Type': 'application/json',
